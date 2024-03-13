@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/G.png">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/d0b104a98c.js" crossorigin="anonymous"></script>
+    <script src="../js/app.js"></script>
+    <title>Desafio encriptador</title>
+</head>
+<body class="encryptor-body">
+    <header class="header">
+        <div class="alura-img">
+            <img src="../images/aluraLogo.png" alt="Alura logo">
+        </div>
+    </header>
+    <main class="encryptor-main">
+        
+            <section class="encryptor-section">
+                    <div class="texto-a-encriptar">
+                        <textarea placeholder="Ingrese el texto aqui" name="" id="text-input" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="mensaje-requisitos">
+                        <i class="fa-solid fa-circle-exclamation" style="color: #1ed760;"></i><p>Solo letras minúsculas y sin acentos</p>
+                    </div>
+                    <div class="div-botones">
+                        <button class="encriptar">Encriptar</button>
+                        <button class="desencriptar">Desencriptar</button>
+                    </div>                
+            </section>
+            <section class="aside-section">
+                <aside class="aside-encriptador">
+                    <div>
+                        <textarea class="mensaje" name="" id="" cols="30" rows="10" ></textarea>
+                    </div>
+                    <h2 class="mensaje-busqueda">Ningún mensaje fue encontrado</h2>
+                    <p class="mensaje-busqueda">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    <p class="texto-copiado">¡Texto copiado en el portapapeles!</p>
+                    <button id="copy">Copiar</button>
+                </aside>
+            </section>
+    </main>
+    <footer class="footer">
+        <p>&#169; Alura Latam - Gabriel Robles - 2024</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,236 @@
+.encryptor-body {
+    background-image: url('../images/backgroundSpace.gif');
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+}
+
+.encryptor-body {
+    padding: 25px;
+}
+.header {
+    height: 50px;
+}
+.encryptor-main {
+    margin-bottom: 10px;
+    margin-left: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.encryptor-section {
+    width: 60%;
+    margin: auto;
+}
+
+
+.alura-img img {
+    top: -10px;
+    padding: 40px;
+    left: -25px;
+}
+
+.texto-a-encriptar textarea {
+    text-transform: lowercase;
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    color: var(--color-spotyGreen);
+    width: 100%;
+    margin-bottom: 11%;
+    margin-top: 5%;
+}
+
+.texto-a-encriptar textarea::placeholder {
+    color: var(--color-spotyGreen);
+}
+
+
+.mensaje-requisitos {
+    display: flex;
+    gap: 5px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.div-botones {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.div-botones button {
+    transition: 1s;
+    background-image: url('../images/greenfire.gif');
+    background-repeat: no-repeat;
+    padding: 1em 20px;
+    width: 49%;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.aside-section {
+    width: 30%;
+}
+
+.aside-encriptador {
+    background-color: #0a1e1d;
+    width: 85%;
+    color: white;
+    text-align: center;
+    margin: auto;
+    border: var(--color-spotyGreen) 3px solid;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+.mensaje {
+    color: white;
+    background: #0a1e1d ;
+    background-image: url('../images/imageAside.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    margin-top: 20px;
+    border-radius: 24px;
+    padding-bottom: 100px;
+    height: 100%;
+    outline: none;
+    resize: none;
+    text-align: center;
+    font-size: 1em;
+}
+.mensaje::placeholder {
+    font-size: 2em;
+    color: var(--color-spotyGreen);
+
+}
+.mensaje:focus {
+    outline: none;
+}
+
+.aside-encriptador h2 {
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.aside-encriptador p {
+    font-size: 14px;
+    margin-bottom: 13%;
+}
+
+.aside-encriptador button {
+    transition: 1s;
+    margin-top: 8%;
+    margin-bottom: 7%;
+    background-image: url('../images/greenfire.gif');
+    background-repeat: no-repeat;
+
+    padding: 1em 20px;
+    width: 80%;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.div-botones button:hover,
+.aside-encriptador button:hover {
+    box-shadow: 0 0 10px white;
+    transform: scale(1.2);
+}
+
+
+.texto-copiado {
+    color: white;
+    opacity:0%;
+}
+.footer {
+    position: absolute;
+    color: white;
+    bottom: 25px;
+}
+@media (max-width: 768px) {
+
+    .encryptor-main {
+        display: block;
+        justify-content: center;
+    }
+
+    .encryptor-section {
+        width: 80%;
+    }
+
+    .encryptor-section textarea {
+        margin-top: 15%;
+        font-size: 3em;
+    }
+
+    .encryptor-section p {
+        font-size: 1.5em;
+    }
+
+    .div-botones {
+        width: 100%;
+        display: block;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    .div-botones button {
+        width: 95%;
+        margin-bottom: 5%;
+        padding: 30px;
+        font-size: 2em;
+    }
+
+    .aside-section {
+        width: 100%;
+    }
+
+    .aside-encriptador {
+        padding: 5px;
+    }
+
+    .aside-encriptador img {
+        display: none;
+    }
+
+    .aside-encriptador h2 {
+        margin-top: 1em;
+
+        margin-bottom: 1em;
+        font-size: 3em;
+    }
+
+    .aside-encriptador p {
+        font-size: 2em;
+        margin-bottom: 18%;
+
+    }
+
+    .aside-encriptador button {
+        width: 80%;
+        margin-bottom: 5%;
+        padding: 30px;
+        font-size: 2em;
+    }
+}

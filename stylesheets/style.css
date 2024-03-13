@@ -1,0 +1,10 @@
+@import '../stylesheets/reset.css';
+@import '../stylesheets/encriptador.css';
+
+
+:root {
+    --color-spotyGreen: #1ed760;
+    --color-blueMoon: #1f1739;
+    --color-shadowMe: #232323;
+    --color-blackHole: #000000;
+}
