@@ -1,19 +1,15 @@
+/* Estilos generales */
 .encryptor-body {
-    background-image: url('../images/backgroundSpace.gif');
+    background-image: url('../images/background.jpeg');
+    background-size: cover;
     font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "slnt" 0;
 }
 
-.encryptor-body {
-    padding: 25px;
-}
 .header {
     height: 50px;
 }
+
 .encryptor-main {
     margin-bottom: 10px;
     margin-left: 80px;
@@ -21,56 +17,70 @@
     justify-content: center;
 }
 
-
 .encryptor-section {
     width: 60%;
-    margin: auto;
+    margin: 0 auto;
+}
+.alura-img {
+    padding: 20px;
+    position: relative;
+}
+.alura-img img {
+    top: 10px;
+    left: 20px;
 }
 
-
-.alura-img img {
-    top: -10px;
-    padding: 40px;
-    left: -25px;
+.texto-a-encriptar {
+    width: 100%;
 }
 
 .texto-a-encriptar textarea {
-    text-transform: lowercase;
-    background: none;
+    box-sizing: border-box;
+    background: #f7814f;
     border: none;
     outline: none;
     resize: none;
-    padding: 10px;
+    padding: 20px;
     font-family: Arial, sans-serif;
     font-size: 1.5em;
-    color: var(--color-spotyGreen);
+    color: white;
+    font-weight: 500;
     width: 100%;
-    margin-bottom: 11%;
-    margin-top: 5%;
+    margin-bottom: 13.5%;
+    border-radius: 18px;
+    opacity: 100%;
+    animation: encript 1s 2;
 }
 
 .texto-a-encriptar textarea::placeholder {
-    color: var(--color-spotyGreen);
+    color: white;
+    font-weight: 500;
 }
 
+@keyframes encript {
+    0% { opacity: 100%; }
+    50% { opacity: 50%; }
+    100% { opacity: 100%; }
+}
 
+/* Sección de botones y requisitos */
 .mensaje-requisitos {
     display: flex;
     gap: 5px;
-    color: white;
+    color: black;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .div-botones {
     width: 100%;
     display: flex;
     justify-content: space-between;
-
 }
 
 .div-botones button {
     transition: 1s;
-    background-image: url('../images/greenfire.gif');
+    background: linear-gradient(#fc8b00, #dbb853);
     background-repeat: no-repeat;
     padding: 1em 20px;
     width: 49%;
@@ -82,45 +92,19 @@
     cursor: pointer;
 }
 
+/* Aside para el encriptador */
 .aside-section {
     width: 30%;
 }
 
 .aside-encriptador {
-    background-color: #0a1e1d;
-    width: 85%;
+    background: #f7814f;
+    width: 90%;
     color: white;
     text-align: center;
     margin: auto;
-    border: var(--color-spotyGreen) 3px solid;
     padding: 10px;
     border-radius: 15px;
-}
-
-
-.mensaje {
-    color: white;
-    background: #0a1e1d ;
-    background-image: url('../images/imageAside.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: none;
-    margin-top: 20px;
-    border-radius: 24px;
-    padding-bottom: 100px;
-    height: 100%;
-    outline: none;
-    resize: none;
-    text-align: center;
-    font-size: 1em;
-}
-.mensaje::placeholder {
-    font-size: 2em;
-    color: var(--color-spotyGreen);
-
-}
-.mensaje:focus {
-    outline: none;
 }
 
 .aside-encriptador h2 {
@@ -131,16 +115,15 @@
 
 .aside-encriptador p {
     font-size: 14px;
-    margin-bottom: 13%;
+    margin-bottom: 30px;
 }
 
 .aside-encriptador button {
     transition: 1s;
-    margin-top: 8%;
+    margin-top: 20%;
     margin-bottom: 7%;
-    background-image: url('../images/greenfire.gif');
+    background: linear-gradient(#fc8b00, #dbb853);
     background-repeat: no-repeat;
-
     padding: 1em 20px;
     width: 80%;
     border-radius: 10px;
@@ -157,46 +140,95 @@
     transform: scale(1.2);
 }
 
+/* Mensaje encriptado y resultado */
+.mensaje {
+    color: white;
+    background: #f7814f;
+    background-image: url('../images/notexto.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    margin-top: 10%;
+    border-radius: 24px;
+    outline: none;
+    resize: none;
+    text-align: center;
+    padding: 5%;
+}
 
+.mensaje::placeholder {
+    font-size: 2em;
+    color: var(--color-spotyGreen);
+}
+
+.mensaje:focus {
+    outline: none;
+}
+
+.resultado {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Mensaje de texto copiado */
 .texto-copiado {
     color: white;
-    opacity:0%;
+    opacity: 0%;
 }
-.footer {
-    position: absolute;
-    color: white;
-    bottom: 25px;
-}
-@media (max-width: 768px) {
 
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    .mensaje {
+        padding: 0;
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
     .encryptor-main {
         display: block;
-        justify-content: center;
+        margin-bottom: 10px;
+        margin-left: 0px;
     }
 
     .encryptor-section {
-        width: 80%;
+        width: 90%;
     }
 
     .encryptor-section textarea {
+        text-align: center;
         margin-top: 15%;
         font-size: 3em;
+        padding: 20px 15px 0 15px;
+    }
+
+    .encryptor-section textarea::placeholder {
+        font-size: 1em;
     }
 
     .encryptor-section p {
         font-size: 1.5em;
     }
 
+    .mensaje-requisitos {
+        display: flex;
+        gap: 5px;
+        color: black;
+        margin-bottom: 10px;
+        font-weight: bold;
+        text-align: center;
+        justify-content: center;
+    }
+
     .div-botones {
         width: 100%;
-        display: block;
-        margin: auto;
-        text-align: center;
-
+        display: flex;
+        justify-content: space-around;
     }
 
     .div-botones button {
-        width: 95%;
+        animation: none;
+        width: 45%;
         margin-bottom: 5%;
         padding: 30px;
         font-size: 2em;
@@ -210,21 +242,24 @@
         padding: 5px;
     }
 
-    .aside-encriptador img {
-        display: none;
+    .aside-encriptador textarea {
+        background: none;
     }
 
     .aside-encriptador h2 {
         margin-top: 1em;
-
         margin-bottom: 1em;
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .aside-encriptador p {
         font-size: 2em;
-        margin-bottom: 18%;
+        margin-bottom: 30px;
+    }
 
+    .mensaje {
+        padding-bottom: 0px;
+        font-size: 3em;
     }
 
     .aside-encriptador button {
@@ -232,5 +267,37 @@
         margin-bottom: 5%;
         padding: 30px;
         font-size: 2em;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto-a-encriptar textarea::placeholder {
+        font-size: 0.5em;
+    }
+
+    .div-botones {
+        display: block;
+    }
+
+    .mensaje-requisitos {
+        font-size: 0.5em;
+    }
+
+    .div-botones button {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .mensaje {
+        font-size: 2em;
+    }
+
+    .aside-encriptador p {
+        font-size: 1em;
+    }
+
+    .aside-encriptador button {
+        font-size: 1em;
     }
 }

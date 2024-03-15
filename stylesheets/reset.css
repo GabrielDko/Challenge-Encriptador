@@ -46,3 +46,17 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+* {
+    box-sizing: border-box;
+
+}
+
+.alura-img {
+    padding: 20px;
+    position: relative;
+}
+.alura-img img {
+    top: 10px;
+    left: 20px;
+}
