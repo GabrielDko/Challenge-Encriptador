@@ -83,6 +83,13 @@ window.addEventListener('load', () => {
     desencriptar.addEventListener('click', (e) => {
         if (validarTexto(textoUsuario.value)) {
             encriptacion(textoUsuario, 1, 0);
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "¡Se desencriptó con exito tu texto!",
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
     });
 
