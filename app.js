@@ -7,7 +7,8 @@ window.addEventListener('load', () => {
     let textoConvertido;
     const mensajeCopiado = document.querySelector('.texto-copiado')
     const conversiones = [['e', 'enter'], ['i', 'imes'], ['a', 'ai'], ['o', 'ober'], ['u', 'ufat']];
-
+    textoUsuario.focus();
+    
     function encriptacion(textoInput, indice1, indice2) {
         let texto = textoInput.value.trim();
         textoConvertido = texto;
