@@ -8,7 +8,7 @@
     --color-blackHole: #000000;
 }
 .encryptor-body {
-    background-image: url('../images/background.jpeg');
+    background-image: url('./images/background.jpeg');
     background-size: cover;
     font-family: "Inter", sans-serif;
     font-weight: 400;
@@ -144,7 +144,7 @@
 .mensaje {
     color: white;
     background: #f7814f;
-    background-image: url('../images/notexto.jpeg');
+    background-image: url('./images/notexto.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
@@ -273,7 +273,7 @@
 
 .footer {
     margin-top: 10%;
-    background-image: url('../images/coding.gif');
+    background-image: url('./images/coding.gif');
     color: white;
     bottom: 25px;
     height: 100%;
