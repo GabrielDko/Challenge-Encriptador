@@ -7,7 +7,7 @@
 }
 
 .header {
-    height: 50px;
+    padding: 20px;
 }
 
 .encryptor-main {
@@ -20,14 +20,6 @@
 .encryptor-section {
     width: 60%;
     margin: 0 auto;
-}
-.alura-img {
-    padding: 20px;
-    position: relative;
-}
-.alura-img img {
-    top: 10px;
-    left: 20px;
 }
 
 .texto-a-encriptar {
@@ -137,7 +129,7 @@
 .div-botones button:hover,
 .aside-encriptador button:hover {
     box-shadow: 0 0 10px white;
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 /* Mensaje encriptado y resultado */
@@ -271,6 +263,27 @@
     }
 }
 
+.footer {
+    margin-top: 10%;
+    background-image: url('../images/coding.gif');
+    color: white;
+    bottom: 25px;
+    height: 100%;
+    padding: 30px;
+}
+
+.redes {
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.autor-caja {
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+}
 @media (max-width: 480px) {
     .texto-a-encriptar textarea::placeholder {
         font-size: 0.5em;
@@ -290,7 +303,7 @@
     }
 
     .mensaje {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .aside-encriptador p {
