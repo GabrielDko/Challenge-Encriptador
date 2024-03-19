@@ -71,7 +71,7 @@ window.addEventListener('load', () => {
         if (validarTexto(textoUsuario.value)) {
             encriptacion(textoUsuario, 0, 1);
             Swal.fire({
-                position: "top",
+                position: "center",
                 icon: "success",
                 title: "¡Se encriptó con exito tu texto!",
                 showConfirmButton: false,
