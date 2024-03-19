@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
     const mensajeCopiado = document.querySelector('.texto-copiado')
     const conversiones = [['e', 'enter'], ['i', 'imes'], ['a', 'ai'], ['o', 'ober'], ['u', 'ufat']];
     textoUsuario.focus();
-    
+
     function encriptacion(textoInput, indice1, indice2) {
         let texto = textoInput.value.trim();
         textoConvertido = texto;
@@ -34,10 +34,10 @@ window.addEventListener('load', () => {
     function tieneMayuscula(texto) {
         return /[A-Z]/.test(texto);
     }
-    function tieneAcentos(texto) {
-        const acentos = /[áéíóúÁÉÍÓÚ]/;
-        return acentos.test(texto);
-    }
+    function tieneCaracteresEspeciales(texto) {
+    const caracteresEspeciales = /[^a-zA-Z\s]/;
+    return caracteresEspeciales.test(texto);
+}
     
 
     function validarTexto(text) {
@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
             return false;
         }
     
-        if (tieneAcentos(textoUsuario.value)) {
+        if (tieneCaracteresEspeciales(textoUsuario.value)) {
             Swal.fire({
                 icon: "error",
                 title: "¡Ups!",
