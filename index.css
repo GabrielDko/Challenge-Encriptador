@@ -176,6 +176,28 @@
     opacity: 0%;
 }
 
+.footer {
+    margin-top: 10%;
+    background-image: url('./images/coding.gif');
+    color: white;
+    bottom: 25px;
+    height: 100%;
+    padding: 30px;
+}
+
+.redes {
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.autor-caja {
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+}
+
 /* Estilos responsivos */
 @media (max-width: 1024px) {
     .mensaje {
@@ -198,16 +220,16 @@
     .encryptor-section textarea {
         text-align: center;
         margin-top: 15%;
-        font-size: 3em;
+        font-size: 1.5em;
         padding: 20px 15px 0 15px;
     }
 
     .encryptor-section textarea::placeholder {
-        font-size: 1em;
+        font-size: 0.5em;
     }
 
     .encryptor-section p {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     .mensaje-requisitos {
@@ -231,7 +253,7 @@
         width: 45%;
         margin-bottom: 5%;
         padding: 30px;
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .aside-section {
@@ -253,7 +275,7 @@
     }
 
     .aside-encriptador p {
-        font-size: 2em;
+        font-size: 1em;
         margin-bottom: 30px;
     }
 
@@ -269,29 +291,12 @@
         font-size: 2em;
         margin-top: 0;
     }
+    .texto-copiado {
+        font-size: 0.5em;
+    }
 }
 
-.footer {
-    margin-top: 10%;
-    background-image: url('./images/coding.gif');
-    color: white;
-    bottom: 25px;
-    height: 100%;
-    padding: 30px;
-}
 
-.redes {
-    margin: auto;
-    padding: 15px;
-    text-align: center;
-    font-size: 2em;
-}
-
-.autor-caja {
-    margin: auto;
-    padding: 15px;
-    text-align: center;
-}
 @media (max-width: 480px) {
     .texto-a-encriptar textarea::placeholder {
         font-size: 0.5em;
