@@ -9,14 +9,20 @@ window.addEventListener('load', () => {
     const conversiones = [['e', 'enter'], ['i', 'imes'], ['a', 'ai'], ['o', 'ober'], ['u', 'ufat']];
     textoUsuario.focus();
 
-    function encriptacion(textoInput, indice1, indice2) {
+    function encriptacion(textoInput, indice) {
         let texto = textoInput.value.trim();
         textoConvertido = texto;
         textoUsuario.value = '';
         conversiones.forEach(conversion => {
-            textoConvertido = textoConvertido.replaceAll(conversion[indice1], conversion[indice2]);
+            if (indice === 0) {
+                // Encriptación: reemplaza letras originales por sus equivalentes encriptados
+                textoConvertido = textoConvertido.replaceAll(conversion[0], conversion[1]);
+            } else {
+                // Desencriptación: reemplaza letras encriptadas por sus equivalentes originales
+                textoConvertido = textoConvertido.replaceAll(conversion[1], conversion[0]);
+            }
         });
-
+    
         if (texto) {
             resultado.style.backgroundImage = 'none';
             resultado.textContent = textoConvertido;
@@ -30,6 +36,7 @@ window.addEventListener('load', () => {
             return false;
         }
     }
+    
 
     function tieneMayuscula(texto) {
         return /[A-Z]/.test(texto);
@@ -70,7 +77,7 @@ window.addEventListener('load', () => {
 
     encriptar.addEventListener('click', (e) => {
         if (validarTexto(textoUsuario.value)) {
-            encriptacion(textoUsuario, 0, 1);
+            encriptacion(textoUsuario, 0);
             Swal.fire({
                 position: "center",
                 icon: "success",
@@ -83,7 +90,7 @@ window.addEventListener('load', () => {
 
     desencriptar.addEventListener('click', (e) => {
         if (validarTexto(textoUsuario.value)) {
-            encriptacion(textoUsuario, 1, 0);
+            encriptacion(textoUsuario, 1);
             Swal.fire({
                 position: "center",
                 icon: "success",
